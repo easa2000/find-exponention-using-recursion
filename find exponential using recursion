@@ -1,0 +1,19 @@
+#include<stdio.h>
+int exp(int,int);
+void main(){
+    int num1,num2,res;
+    printf("\n Enter the first number: ");
+    scanf("%d",&num1);
+    
+    printf("\n Enter the second number: ");
+    scanf("%d",&num2);
+
+    res = exp(num1,num2);
+    printf("\n Result = %d",res);
+}
+int exp(int x,int y){
+    if(y==0)
+       return 1;
+    else 
+       return ( x * exp(x,y-1));
+}
